@@ -31,10 +31,10 @@ uint32_t float_to_servo(float);
 
 TIM_TypeDef *Timers[] = {TIM1, TIM2, TIM3, TIM4};
 uint32_t *CCR_Registers[] = {
-		  &TIM1->CCR1, &TIM1->CCR2, &TIM1->CCR3, &TIM1->CCR4,
 		  &TIM2->CCR1, &TIM2->CCR2, &TIM2->CCR3, &TIM2->CCR4,
-		  &TIM3->CCR1, &TIM3->CCR2, &TIM3->CCR3, &TIM3->CCR4,
-		  &TIM4->CCR1, &TIM4->CCR2, &TIM4->CCR3, &TIM4->CCR4};
+		  &TIM3->CCR1, &TIM3->CCR2, &TIM1->CCR4, &TIM1->CCR3,
+		  &TIM3->CCR3, &TIM3->CCR4, &TIM4->CCR1, &TIM4->CCR2,
+		  &TIM4->CCR3, &TIM4->CCR4, &TIM1->CCR1, &TIM1->CCR2};
 volatile uint8_t* i2c_data;
 volatile uint8_t i2c_index = 0;
 
